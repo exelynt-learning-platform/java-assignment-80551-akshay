@@ -69,7 +69,7 @@ In a centralized system, the project history is stored on a central server. Deve
 - If the central server becomes unavailable, many operations may stop.
 - Developers generally depend more on the server for version control operations.
 
-**Example:** Subversion (SVN) is a centralized version control system.
+**Example:** Subversion (SVN) is a centralized version control syste
 
 ### Distributed Version Control System (DVCS)
 
