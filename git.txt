@@ -8,7 +8,7 @@ Version control is a system that tracks changes made to files over time. It help
 - It keeps a history of changes.
 - It helps recover deleted or incorrect code.
 - It allows multiple developers to work on the same project.
-- It makes it easier to identify who made a change and when.
+- It makes it easier to identify who made a change and whe
 - It reduces the risk of losing important work.
 
 **Example:** If I make a mistake while updating my project, version control helps me check the previous version and restore the correct code.
