@@ -1,0 +1,175 @@
+तुझ्या Introduction to GitHub assignment साठी खाली proper English मध्ये complete answer दिला आहे. तू मागील assignments मध्ये तयार केलेला `GitBasics` local repository वापरून तो GitHub सोबत connect करू शकतोस.
+
+# Assignment: Getting Started with GitHub and Remote Repositories
+
+## 1. Objective
+
+The objective of this assignment is to create a GitHub account, create a remote repository, connect a local Git repository to GitHub, and understand how to manage repositories using Git and GitHub.
+
+## 2. Create a GitHub Account
+
+[VSCodeのソース管理をはじめよう！ Gitの連携機能について解説 (1/3)|CodeZine（コードジン）](https://images.openai.com/static-rsc-4/nKpmhceG0bUIFv1-FGLs4RzepVbQQguNVzHzTnRg1I-JZfzCQ87zUG81aDQz8cXSQHwX6vssiVwKawrUcQB0Ltyvvzq7t997UQ_0B0_taRnkV49t80RtCjb59yyIO7DPWS4WCEV5qbQg5WX3Pe3Hg6PVeWaACCiZ5q9imn9k6Yc?purpose=inline)
+
+Steps:
+
+1. Open the official website: [GitHub](https://github.com/?utm_source=chatgpt.com).
+2. Click Sign up.
+3. Enter your email address and create your account credentials.
+4. Complete the verification steps.
+5. Sign in to your GitHub account.
+
+Explanation: GitHub is an online platform that hosts Git repositories. It helps developers store code remotely, collaborate with others, and manage project versions.
+
+## 3. Create a Remote Repository
+
+[9.5 Setting up a project in RStudio | An Introduction to R](https://images.openai.com/static-rsc-4/W4XlG3r4fYP9gPvStx1jElkupzeFH6WWuCydThZGitGUbCDYivIEAiwYnneLO_shMpkKMENTZD4VQkitJTsPAevG1o9ZaJ3VlxybMc-o6BDAdq1yBnXSv0TL_C2OVaMQJlq7egX_PIkKGt4DbUg5DtP6SXcX32clHeAYxIr0Wps?purpose=inline)
+
+Steps:
+
+1. Sign in to GitHub.
+2. Click the `+` icon in the top-right corner.
+3. Select New repository.
+4. Enter the repository name as `GitBasics`.
+5. Choose Public or Private.
+6. Leave README, `.gitignore`, and License unchecked because you are connecting an existing local repository.
+7. Click Create repository.
+
+Explanation: A remote repository is a repository hosted online. It allows you to store your project and access it from other computers.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.github.com\&sz=32)
+
+GitHub Docs
+
++1
+
+
+
+## 4. Connect the Local Repository to GitHub
+
+Open your Mac Terminal and navigate to the existing project:
+
+```
+cd GitBasics
+```
+
+Check the current branch:
+
+```
+git branch
+```
+
+If your current branch is not `main`, and you want to use `main` for this assignment, run:
+
+```
+git branch -M main
+```
+
+Now copy the HTTPS repository URL from your newly created GitHub repository. It will look similar to:
+
+`https://github.com/YOUR-USERNAME/GitBasics.git`
+
+Replace `YOUR-USERNAME` with your actual GitHub username.
+
+Add the remote repository:
+
+```
+git remote add origin https://github.com/YOUR-USERNAME/GitBasics.git
+```
+
+Verify the connection:
+
+```
+git remote -v
+```
+
+Expected output format:
+
+```
+origin  https://github.com/YOUR-USERNAME/GitBasics.git (fetch)
+origin  https://github.com/YOUR-USERNAME/GitBasics.git (push)
+```
+
+Here, `origin` is the conventional name for the remote repository.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
++1
+
+
+
+## 5. Push Your Local Repository to GitHub
+
+First, confirm that your local changes have been committed:
+
+```
+git status
+git log --oneline
+```
+
+Then upload your commits to GitHub:
+
+```
+git push -u origin main
+```
+
+You may need to authenticate through your browser or a configured Git credential method.
+
+Explanation:
+
+- `git push` uploads local commits to the remote repository.
+- `origin` identifies the remote repository.
+- `main` identifies the branch being uploaded.
+- `-u` sets the upstream tracking relationship for future pushes and pulls.
+
+These steps follow GitHub's documented process for publishing an existing local repository.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.github.com\&sz=32)
+
+GitHub Docs
+
++1
+
+
+
+## 6. Verify the Repository on GitHub
+
+1. Open your repository page on GitHub.
+2. Refresh the page.
+3. Confirm that `index.txt`, `about.txt`, and any other committed files are visible.
+4. Open the commit history to verify that your commits have been uploaded.
+
+If the files appear on GitHub, the local-to-remote connection and push have worked.
+
+## 7. Screenshots to Submit
+
+Screenshot 1 — GitHub Account
+
+Show your signed-in GitHub profile. Avoid showing private account details.
+
+Screenshot 2 — Remote Repository
+
+Show the GitHub repository named `GitBasics`.
+
+Screenshot 3 — Remote Configuration
+
+Show the output of `git remote -v` in Terminal.
+
+Screenshot 4 — Successful Push
+
+Show the successful `git push -u origin main` output.
+
+Screenshot 5 — Files on GitHub
+
+Show your uploaded files and commit history on the repository page.
+
+## 8. Conclusion
+
+In this assignment, I created a GitHub account and a remote repository. I connected my local Git repository to GitHub using `git remote add origin`, verified the remote URL using `git remote -v`, and uploaded my committed changes using `git push`. I also learned how Git and GitHub work together to store and manage project code.
+
+Important: Use your actual command outputs and screenshots. Never upload passwords, API keys, or other sensitive information to GitHub.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.github.com\&sz=32)
+
+GitHub Docs
