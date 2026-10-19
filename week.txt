@@ -1,0 +1,235 @@
+तुझ्या Branching & Merging assignment साठी खाली complete answer proper English मध्ये दिला आहे. Mac Terminal मध्ये commands एकेक करून run कर आणि प्रत्येक महत्त्वाच्या step चा screenshot घे.
+
+# Assignment: Working with Branches and Merging Changes
+
+Topic: Git Branching and Merging
+
+## 1. Objective
+
+The objective of this assignment is to understand how to create and switch between Git branches, make changes in a separate branch, merge those changes into the main branch, and understand how merge conflicts occur.
+
+## 2. Check Your Repository
+
+मागच्या assignment मधील `GitBasics` repository वापर.
+
+```
+cd GitBasics
+git status
+git branch
+```
+
+If your working tree is clean, continue to the next step. If you have uncommitted changes, commit or safely save them first.
+
+## 3. Create and Switch Between Branches
+
+First, make sure your main branch is named `main`.
+
+```
+git branch -M main
+```
+
+Create a new branch named `feature-about`:
+
+```
+git branch feature-about
+```
+
+Switch to the new branch:
+
+```
+git switch feature-about
+```
+
+Verify the current branch:
+
+```
+git branch
+```
+
+Expected output:
+
+```
+* feature-about
+  main
+```
+
+The `*` symbol indicates the currently active branch.
+
+Explanation:
+
+- `git branch feature-about` creates a new branch.
+- `git switch feature-about` switches to that branch.
+- A branch allows developers to work on changes separately without immediately changing the main branch.
+
+## 4. Make Changes in a Separate Branch
+
+Create a new file in the `feature-about` branch:
+
+```
+echo "This content was added in the feature branch." > feature.txt
+```
+
+Check the status:
+
+```
+git status
+```
+
+Stage and commit the new file:
+
+```
+git add feature.txt
+git commit -m "Add feature branch information"
+```
+
+Verify your commit:
+
+```
+git log --oneline
+```
+
+Explanation: The new file and its commit belong to the `feature-about` branch. The `main` branch has not yet received this change.
+
+## 5. Merge the Feature Branch into Main
+
+Switch back to the main branch:
+
+```
+git switch main
+```
+
+Check the files:
+
+```
+ls
+```
+
+You should not see `feature.txt` yet, because the change has not been merged into `main`.
+
+Now merge the feature branch:
+
+```
+git merge feature-about
+```
+
+Verify the result:
+
+```
+ls
+git log --oneline
+git status
+```
+
+You should now see `feature.txt` on the main branch, and the commit history should include `Add feature branch information`.
+
+Explanation: The `git merge` command integrates the changes from one branch into the branch that is currently checked out.
+
+## 6. Understand Merge Conflicts
+
+A merge conflict occurs when Git cannot automatically combine changes from different branches.
+
+For example, suppose both `main` and `feature-about` modify the same line in `index.txt` differently. When you merge the branches, Git may report a conflict because it cannot decide which version to keep.
+
+Example of a merge conflict
+
+```
+<<<<<<< HEAD
+Welcome to the main branch
+=======
+Welcome to the feature branch
+>>>>>>> feature-about
+```
+
+These markers identify the conflicting versions. They are examples of Git's conflict-marker format.
+
+### How to resolve a merge conflict
+
+1. Open the conflicted file.
+2. Decide which changes to keep, or combine both versions.
+3. Remove the conflict markers (`<<<<<<<`, `=======`, and `>>>>>>>`).
+4. Save the file.
+5. Stage the resolved file and complete the merge.
+
+```
+git add index.txt
+git commit -m "Resolve merge conflict in index.txt"
+```
+
+If Git has already created a merge commit automatically, you may not need an additional commit. If the merge is still in progress, the command above completes it after the conflict is resolved.
+
+## 7. Optional: Practise a Real Merge Conflict
+
+Run this exercise only after the earlier merge has completed successfully.
+
+First, create a branch:
+
+```
+git switch -c conflict-demo
+```
+
+Change the first line of `index.txt`:
+
+```
+echo "Content from feature branch" > index.txt
+git add index.txt
+git commit -m "Update index content in feature branch"
+```
+
+Switch to main and make a different change to the same file:
+
+```
+git switch main
+echo "Content from main branch" > index.txt
+git add index.txt
+git commit -m "Update index content in main branch"
+```
+
+Now merge:
+
+```
+git merge conflict-demo
+```
+
+Git should report a conflict because both branches changed the same line differently.
+
+Check which files have conflicts:
+
+```
+git status
+```
+
+Open `index.txt`, resolve the conflict, save the file, and run:
+
+```
+git add index.txt
+git commit -m "Resolve index content merge conflict"
+```
+
+This exercise deliberately replaces the contents of `index.txt` on each branch. Use it only if you are comfortable overwriting that example file.
+
+## 8. Screenshots or Command Outputs to Submit
+
+Capture your own Terminal output showing:
+
+1. Creating the `feature-about` branch.
+2. Switching branches and confirming with `git branch`.
+3. Creating and committing `feature.txt`.
+4. Switching to `main` and merging `feature-about`.
+5. Verifying the merged file and commit history.
+6. The merge conflict message and `git status` output, if you complete the optional exercise.
+7. The resolved conflict and final successful commit.
+
+## 9. Conclusion
+
+In this assignment, I learned how to create and switch between Git branches, make changes independently, and merge a feature branch into the main branch. I also learned that merge conflicts occur when Git cannot automatically combine conflicting changes and that they can be resolved by editing the affected files and committing the resolution.
+
+Important commands to remember:
+
+| Command                     | Purpose                                 |
+| --------------------------- | --------------------------------------- |
+| `git branch`                | Lists branches                          |
+| `git switch branch-name`    | Switches branches                       |
+| `git switch -c branch-name` | Creates and switches to a new branch    |
+| `git merge branch-name`     | Merges a branch into the current branch |
+| `git status`                | Checks repository status                |
+| `git log --oneline`         | Displays concise commit history         |
