@@ -1,0 +1,164 @@
+तुझ्या Git Repository Basics assignment साठी खाली proper English मध्ये complete answer दिला आहे. Mac Terminal मध्ये commands run करून screenshots घे आणि assignment मध्ये submit कर.
+
+# Assignment: Create and Understand a Git Repository
+
+Topic: Git Repository Basics
+
+## 1. Objective
+
+The objective of this assignment is to create a project folder, initialize a Git repository, understand the `.git` folder, create a file, check its status, and learn the three Git file states.
+
+## 2. Create a New Project Folder
+
+Open Terminal and run:
+
+```
+mkdir GitBasics
+cd GitBasics
+```
+
+Explanation:
+
+- `mkdir GitBasics` creates a new folder named `GitBasics`.
+- `cd GitBasics` moves into that folder.
+
+## 3. Initialize a Git Repository
+
+Run this command:
+
+```
+git init
+```
+
+Expected output may look like:
+
+```
+Initialized empty Git repository in .../GitBasics/.git/
+```
+
+Explanation: The `git init` command initializes a new Git repository in the current folder. It creates a hidden `.git` directory that stores Git's repository information.
+
+## 4. Identify and Explain the `.git` Folder
+
+To view hidden files and folders, run:
+
+```
+ls -la
+```
+
+You should see a `.git` directory in the output.
+
+What is the `.git` folder?
+
+The `.git` folder is the internal database of the repository. It stores information such as commit history, branches, configuration, and Git's tracking data.
+
+Important: Do not delete the `.git` folder if you want to preserve the repository's Git history and configuration.
+
+## 5. Create a New File
+
+Run:
+
+```
+touch index.txt
+```
+
+Add some content to the file:
+
+```
+echo "Welcome to Git Basics" > index.txt
+```
+
+Check the file:
+
+```
+cat index.txt
+```
+
+Expected output:
+
+```
+Welcome to Git Basics
+```
+
+## 6. Check File Status Using `git status`
+
+Run:
+
+```
+git status
+```
+
+Expected output will contain information similar to:
+
+```
+Untracked files:
+  index.txt
+```
+
+Explanation: Git identifies `index.txt` as an untracked file because it has not yet been added to Git's staging area.
+
+## 7. Understand the Three Git File States
+
+Git commonly uses three file states to describe how changes move through a repository.
+
+1\. Modified
+
+The file has been changed, but the latest changes have not yet been staged for the next commit.
+
+2\. Staged
+
+The file's changes have been selected for inclusion in the next commit using `git add`.
+
+3\. Committed
+
+The staged changes have been saved as a commit in the local Git repository.
+
+### Practical demonstration
+
+Follow these commands to observe the file states.
+
+Step 1: Untracked
+
+```
+git status
+```
+
+The new `index.txt` file should appear under `Untracked files`.
+
+Step 2: Staged
+
+```
+git add index.txt
+git status
+```
+
+The file should appear under `Changes to be committed`.
+
+Step 3: Committed
+
+```
+git commit -m "Add index.txt file"
+git status
+```
+
+If the commit succeeds, Git should report that the working tree is clean.
+
+If Git asks you to configure your identity, use the username and email commands from your previous assignment.
+
+## 8. Screenshots to Submit
+
+Take your own screenshots showing:
+
+1. Project folder creation using `mkdir` and `cd`.
+2. Repository initialization using `git init`.
+3. The `.git` folder displayed using `ls -la`.
+4. Creation and contents of `index.txt`.
+5. The untracked state shown by `git status`.
+6. The staged state after `git add index.txt`.
+7. The committed state after `git commit` and `git status`.
+
+## 9. Conclusion
+
+In this assignment, I created a project folder and initialized a Git repository using `git init`. I learned that the `.git` folder stores repository information and that `git status` displays the current state of files. I also learned how files move through the untracked, modified, staged, and committed states during the Git workflow.
+
+Remember: `git add` stages changes, while `git commit` saves those staged changes in the local repository. GitHub is not required for this assignment because all these steps can be completed locally.
