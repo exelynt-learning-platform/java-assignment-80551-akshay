@@ -1,0 +1,58 @@
+Assignment: Setting Up Git and Understanding the Git Environment
+1. Objective
+The objective of this assignment is to install Git, verify the installation, configure the global username and email address, and understand how to use the Terminal to execute Git commands.
+2. Installing Git on macOS
+Git is a version control system that helps developers track changes in their code and collaborate with other developers.
+
+Step 1: Open Terminal on your Mac.
+- Press Command + Space.
+- Type Terminal.
+- Press Enter.
+Step 2: Check whether Git is already installed.
+git --version
+
+
+If Git is installed, the terminal displays a version number, for example:
+git version 2.x.x
+
+
+The exact version may differ.
+
+Step 3: If Git is not installed, install it using Homebrew:
+brew install git
+
+
+If Homebrew is not installed, you can install Apple's Command Line Tools instead:
+xcode-select --install
+
+
+Follow the instructions displayed on your Mac. After installation, run git --version again.
+3. Configure Global Username and Email
+Git uses your username and email address to identify who created a commit.
+
+Run these commands in Terminal, replacing the example values with your own details.
+git config --global user.name "Your Name"
+
+
+git config --global user.email "your-email@example.com"
+
+
+Verify the configuration:
+git config --global --list
+
+
+Expected output will look similar to:
+user.name=Your Name
+user.email=your-email@example.com
+
+
+Use the email address associated with your GitHub account if you want your commits linked to that account.
+4. Demonstrate Git Commands in Terminal
+Run the following commands one by one.
+Command	Purpose
+pwd	Displays the current working directory.
+ls	Lists files and folders.
+git --version	Displays the installed Git version.
+git config --global --list	Displays global Git settings.
+git help	Displays Git help information.
+These commands demonstrate basic Terminal usage and confirm that Git is configured.
