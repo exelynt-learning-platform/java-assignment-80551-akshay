@@ -265,7 +265,7 @@ Expected results:
 
 Submission checklist
 
-0 of 6
+
 
 Local repository
 
