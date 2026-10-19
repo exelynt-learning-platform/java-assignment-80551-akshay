@@ -1,0 +1,190 @@
+तुझ्या Working with Remote Repositories assignment साठी खाली complete answer proper English मध्ये दिला आहे. मागील assignment मधील `GitBasics` repository वापरून हे steps Mac Terminal मध्ये perform कर.
+
+# Assignment: Managing Code with Remote Git Repositories
+
+Topic: Git, GitHub, and Remote Repository Management
+
+## 1. Objective
+
+The objective of this assignment is to learn how to push code to GitHub, pull updates from a remote repository, clone an existing repository, understand the meaning of `origin` and `main`, and explain the real-life collaboration workflow used by developers.
+
+## 2. Push Code to GitHub
+
+Step 1: Open Terminal and navigate to your local repository.
+
+```
+cd GitBasics
+```
+
+Step 2: Check the current repository status.
+
+```
+git status
+```
+
+Step 3: Add and commit any new changes, if required.
+
+```
+git add .
+git commit -m "Update project files"
+```
+
+If there are no new changes to commit, skip these two commands.
+
+Step 4: Push the code to GitHub.
+
+```
+git push -u origin main
+```
+
+Explanation: The `git push` command uploads local commits to the remote repository on GitHub.
+
+## 3. Pull Updates from a Remote Repository
+
+When another developer updates the remote repository, you can download and integrate those changes into your current branch.
+
+Run:
+
+```
+git pull origin main
+```
+
+Explanation: The `git pull` command fetches remote changes and integrates them into the current local branch. If local and remote changes conflict, Git may require you to resolve a merge conflict.
+
+To check the latest repository status:
+
+```
+git status
+```
+
+## 4. Clone a Repository
+
+Cloning creates a local copy of an existing remote repository, including its Git history.
+
+Step 1: Open your GitHub repository and click the Code button.
+
+Step 2: Copy the HTTPS URL of the repository.
+
+Example URL:
+
+```
+https://github.com/YOUR-USERNAME/GitBasics.git
+```
+
+Step 3: Navigate to a different folder, such as your Desktop, and clone the repository.
+
+```
+cd ~/Desktop
+git clone https://github.com/YOUR-USERNAME/GitBasics.git
+```
+
+Replace `YOUR-USERNAME` with your actual GitHub username.
+
+Step 4: Enter the cloned project folder.
+
+```
+cd GitBasics
+```
+
+Step 5: Verify the repository.
+
+```
+git status
+git remote -v
+```
+
+Explanation: The `git clone` command creates a local copy of the remote repository, allowing developers to work on the project on their computers.
+
+Note: If a `GitBasics` folder already exists on your Desktop, clone into a different directory or choose another location.
+
+## 5. Explain `origin` and `main`
+
+| Term        | Explanation                                                  |
+| ----------- | ------------------------------------------------------------ |
+| `origin`    | The default conventional name given to a remote repository.  |
+| `main`      | The branch commonly used as the primary branch of a project. |
+| `git push`  | Uploads local commits to a remote repository.                |
+| `git pull`  | Fetches and integrates changes from a remote branch.         |
+| `git clone` | Creates a local copy of a remote repository.                 |
+
+To see the configured remote:
+
+```
+git remote -v
+```
+
+To see your local branches:
+
+```
+git branch
+```
+
+To check which branch you are currently using:
+
+```
+git branch --show-current
+```
+
+Simple example: `origin` is the address or nickname of the online repository, while `main` is the branch containing the primary line of development.
+
+## 6. Real-Life Collaboration Workflow
+
+Developers commonly use the following workflow when working together on a project.
+
+1\. Clone the repository
+
+Get the project onto your computer.
+
+2\. Create a feature branch
+
+Work separately from the main branch.
+
+`git switch -c feature-login`
+
+3\. Make changes and commit
+
+Save changes with meaningful messages.
+
+`git add .`
+
+`git commit -m "Add login feature"`
+
+4\. Push the feature branch
+
+`git push -u origin feature-login`
+
+5\. Create a Pull Request
+
+Ask teammates to review the changes on GitHub.
+
+6\. Review, merge, and update
+
+Merge the approved changes into main, then pull the latest updates.
+
+This workflow helps developers work independently, review each other's code, reduce accidental changes, and maintain a shared project history.
+
+## 7. Screenshots or Command Outputs to Submit
+
+Take screenshots of your actual results for these steps:
+
+1. Push: Terminal showing `git push -u origin main`.
+2. Pull: Terminal showing `git pull origin main`.
+3. Clone: Terminal showing the `git clone` command and successful output.
+4. Remote configuration: Output of `git remote -v`.
+5. Branches: Output of `git branch`.
+6. GitHub verification: Your repository page showing the uploaded files and commits.
+7. Collaboration workflow: A feature branch or Pull Request on GitHub, if you complete this optional practical step.
+
+## 8. Conclusion
+
+In this assignment, I learned how to push code to GitHub, pull remote updates, and clone an existing repository. I understood that `origin` identifies the remote repository and `main` is commonly used as the primary development branch. I also learned how developers collaborate through feature branches, commits, Pull Requests, code reviews, and merging changes.
+
+Final verification: Run the following commands in your repository:
+
+```
+git status
+git remote -v
+git log --oneline -5
+```
+
+These commands help verify your working tree, remote repository configuration, and recent commit history.
