@@ -155,7 +155,7 @@ Mistake 1: Forgetting to stage changes
 
 Beginners sometimes modify a file and run `git commit` without running `git add` first.
 
-Solution: Run `git status`, then stage the intended changes using `git add filename` before committing.
+Solution: Run `git status`, then stage the intended changes using `git ad filename` before committing.
 
 Mistake 2: Writing unclear commit messages
 
