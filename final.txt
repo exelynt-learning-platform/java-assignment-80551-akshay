@@ -1,1 +1,199 @@
-ok
+exelynt-learning-platform
+java-assignment-80551-akshay
+Repository navigation
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security and quality
+Insights
+Settings
+Files
+Go to file
+t
+T
+README.md
+final.txt
+java-assignment-80551-akshay
+/
+final.txt
+in
+git-github-version-control-essentials-for-developers-week1-3030
+
+Edit
+
+Preview
+Indent mode
+
+Spaces
+Indent size
+
+2
+Line wrap mode
+
+Soft wrap
+Editing final.txt file contents
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+तुझ्या Week 1 Final Test – Version Control Project using Git & GitHub साठी आपण मागील assignments मधील `GitBasics` project वापरून एक complete practical project तयार करू. यात Git installation, repository creation, files, commits, branching, merging आणि GitHub remote repository हे सर्व concepts cover होतील.
+
+# Assignment: Version Control Project using Git & GitHub
+
+## 1. Objective
+
+The objective of this assignment is to demonstrate practical knowledge of Git and GitHub by creating a version-controlled project, tracking file changes, managing branches, merging changes, and synchronizing the local repository with GitHub.
+
+## 2. Project Structure
+
+आपला project साधारण असा दिसेल:
+
+GitBasics/
+
+`README.md`
+
+`index.txt`
+
+`about.txt`
+
+`.gitignore`
+
+`.git/`
+
+Git's internal repository data
+
+## 3. Step 1 — Create or Verify the Local Repository
+
+Open Terminal on your Mac.
+
+जर मागील assignment मधील repository आधीपासून असेल, तर:
+
+```
+cd GitBasics
+git status
+```
+
+जर नवीन project तयार करायचा असेल, तर:
+
+```
+mkdir GitBasics
+cd GitBasics
+git init
+```
+
+Verify the repository:
+
+```
+git branch
+git log --oneline
+```
+
+जर repository मध्ये अजून commit नसेल, तर `git log` error दाखवू शकतो. पहिला commit झाल्यानंतर तो पुन्हा run कर.
+
+## 4. Step 2 — Create Project Files
+
+Create the required files if they do not already exist:
+
+```
+touch index.txt about.txt README.md .gitignore
+```
+
+Add sample content:
+
+```
+echo "Welcome to Git Basics" > index.txt
+echo "This project demonstrates version control" > about.txt
+```
+
+Add the following content to `README.md` using your text editor:
+
+# Version Control Project using Git & GitHub
+
+## Project Overview
+
+This project demonstrates the basic concepts of Git and GitHub.
+
+## Objectives
+
+- Create and manage a Git repository.
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+ 
